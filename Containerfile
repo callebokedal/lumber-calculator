@@ -9,7 +9,7 @@ RUN npm ci
 # Copy source
 COPY . .
 
-EXPOSE 5173
+EXPOSE 5176
 
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup \
     && chown -R appuser:appgroup /app

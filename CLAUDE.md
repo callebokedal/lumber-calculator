@@ -2,7 +2,11 @@
 
 ## Language
 - All code, comments, variable names, function names, and documentation must be written in **English**
-- UI text (labels, placeholders, messages) should also be in English unless otherwise specified
+- UI text (labels, placeholders, messages) should also be in English/Swedish unless otherwise specified
+
+## UI
+- The app should be for mobile use first, but also working on other dimensions - like desktop.
+- Tailwind should have support for this.
 
 ## Technical Stack
 - **React 18** with **JavaScript** (no TypeScript)
@@ -46,26 +50,10 @@ Project
   nodes: Node[]
   connectors: Connector[]
 
-Node
-  id, label, description
-  childNodes: Node[]         # 0 to many; defines the tree hierarchy (not Connectors)
-  position: { x, y }        # optional override; auto-calculated otherwise
-  size: { w, h }             # optional override
-  handles: 16 anchor points  # 3 per side (top/right/bottom/left) + 1 per corner
-  metadata: Record<string, any>  # dynamic data (tags, network level, etc.)
-
-Connector  (optional; cross-links between any two nodes, not for parent-child hierarchy)
-  id, label
-  sourceNodeId, targetNodeId
-  sourceHandle, targetHandle  # which of the 16 anchor points the connector attaches to
-  direction: 'undirected' | 'one-way-start' | 'one-way-end' | 'two-way'
-  lineStyle: 'solid' | 'dash' | 'dotted'
-  lineWeight: 'normal' | 'thick'
-  lineColor
+TODO
 
 ## Functionality
-- It should always be possible to import/export projects as JSON files
-- Diagrams should be driven by the data model. Moving items in the diagram should, thus, mean that the model must be updated as well.
+TODO
 
 ## Code Conventions
 - **Functional components only** – never class components

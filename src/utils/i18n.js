@@ -9,6 +9,10 @@ const strings = {
   'projects.empty': { sv: 'Inga projekt ännu. Skapa ett nytt projekt för att komma igång.', en: 'No projects yet. Create a new project to get started.' },
   'projects.new': { sv: 'Nytt projekt', en: 'New project' },
   'projects.import': { sv: 'Importera', en: 'Import' },
+  'projects.delete.confirm': { sv: 'Ta bort projektet? Detta går inte att ångra.', en: 'Delete this project? This cannot be undone.' },
+  'projects.items': { sv: 'virken', en: 'items' },
+  'projects.updated': { sv: 'Uppdaterad', en: 'Updated' },
+  'projects.importError': { sv: 'Filen kunde inte läsas som ett giltigt projekt.', en: 'File could not be read as a valid project.' },
 
   // Project detail
   'project.phase1': { sv: 'Planering', en: 'Planning' },

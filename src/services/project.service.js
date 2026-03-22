@@ -94,4 +94,41 @@ function updateStoreStock(projectId, dimensionKey, lengths) {
   update(projectId, { storeStock: stock })
 }
 
-export const projectService = { getAll, getById, create, update, remove, addItem, updateItem, removeItem, updateStoreStock }
+/**
+ * Trigger a JSON file download for a single project.
+ * @param {string} id
+ */
+function exportAsJson(id) {
+  const project = getById(id)
+  if (!project) return
+  const blob = new Blob([JSON.stringify(project, null, 2)], { type: 'application/json' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = `${project.name.replace(/\s+/g, '_')}.json`
+  a.click()
+  URL.revokeObjectURL(url)
+}
+
+/**
+ * Import a project from a parsed JSON object.
+ * Assigns a fresh id and timestamps to avoid collisions.
+ * @param {object} raw
+ * @returns {import('../types/index').Project}
+ */
+function importFromJson(raw) {
+  const now = new Date().toISOString()
+  const project = {
+    ...raw,
+    id: crypto.randomUUID(),
+    createdAt: now,
+    updatedAt: now,
+    items: raw.items ?? [],
+    storeStock: raw.storeStock ?? {},
+    tags: raw.tags ?? [],
+  }
+  storageService.save(KEY, [...getAll(), project])
+  return project
+}
+
+export const projectService = { getAll, getById, create, update, remove, addItem, updateItem, removeItem, updateStoreStock, exportAsJson, importFromJson }

@@ -1,0 +1,9 @@
+_private
+node_modules
+dist
+.git
+.gitignore
+*.log
+.env*
+readme.md
+dockerfile*

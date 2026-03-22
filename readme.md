@@ -6,6 +6,10 @@ An app to simplify planning and purchasing of lumber. The app helps you know whi
 
 The goal is to reduce waste and simplify the time at the hardware store by knowing exactly what dimensions and lengths to buy.
 
+## Demo
+
+[Lumber calculator](https://callebokedal.github.io/lumber-calculator/)
+
 ## Use cases
 
 - The app starts with an overview listing all existing "Projects" (or empty list if no project has yet been created)

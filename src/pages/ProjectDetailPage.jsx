@@ -5,6 +5,7 @@ import { projectService } from '../services/project.service'
 import { t } from '../utils/i18n'
 import { PhaseOnePlanning } from '../features/project/PhaseOnePlanning'
 import { PhaseTwoStore } from '../features/project/PhaseTwoStore'
+import { PhaseThreeResults } from '../features/project/PhaseThreeResults'
 
 const PHASES = ['phase1', 'phase2', 'phase3']
 
@@ -70,9 +71,7 @@ export default function ProjectDetailPage() {
         <PhaseTwoStore project={project} language={language} onProjectChange={refresh} />
       )}
       {activePhase === 'phase3' && (
-        <p className="text-stone-500 text-sm">
-          {t('project.phase3', language)} – coming soon.
-        </p>
+        <PhaseThreeResults project={project} language={language} />
       )}
     </div>
   )

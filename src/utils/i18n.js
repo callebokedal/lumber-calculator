@@ -29,6 +29,18 @@ const strings = {
   'type.post': { sv: 'Stolpe', en: 'Post' },
   'type.rim-joist': { sv: 'Ramvirke', en: 'Rim joist' },
 
+  // Phase 3 – Shopping list
+  'phase3.noItems': { sv: 'Lägg till virke i Planering-fliken först.', en: 'Add lumber in the Planning tab first.' },
+  'phase3.noStock': { sv: 'Inga butikslängder valda för denna dimension. Gå till Butik-fliken.', en: 'No store lengths selected for this dimension. Go to the Store tab.' },
+  'phase3.toBuy': { sv: 'Att köpa', en: 'To buy' },
+  'phase3.pieces': { sv: 'st', en: 'pcs' },
+  'phase3.waste': { sv: 'Spill', en: 'Waste' },
+  'phase3.wastePercent': { sv: 'Spill', en: 'Waste' },
+  'phase3.cutTooLong': { sv: 'Obs: följande längder är längre än tillgängliga butikslängder och kan inte placeras:', en: 'Warning: the following lengths exceed available stock and cannot be placed:' },
+  'phase3.summary': { sv: 'Sammanfattning', en: 'Summary' },
+  'phase3.totalBought': { sv: 'Total inköpt längd', en: 'Total length to buy' },
+  'phase3.totalNeeded': { sv: 'Total nyttjad längd', en: 'Total length used' },
+
   // Phase 2 – Store
   'phase2.title': { sv: 'Tillgängliga längder i butiken', en: 'Available lengths at the store' },
   'phase2.noItems': { sv: 'Lägg till virke i Planering-fliken först.', en: 'Add lumber in the Planning tab first.' },

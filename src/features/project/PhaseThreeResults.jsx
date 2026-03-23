@@ -101,7 +101,7 @@ function DimensionResult({ result, language }) {
             {boards.map((board, i) => (
               <div key={i} className="flex items-start gap-3 text-sm">
                 <span className="text-stone-500 w-5 text-right shrink-0">{i + 1}.</span>
-                <div>
+                <div className="min-w-0">
                   <span className="font-mono text-stone-300">{fmtLength(board.stockLength)}</span>
                   <span className="text-stone-500 mx-1">→</span>
                   <span className="text-stone-400">
@@ -125,7 +125,7 @@ function DimensionResult({ result, language }) {
 
       {/* Stats footer */}
       {totalLengthBought > 0 && (
-        <div className="mt-4 pt-3 border-t border-stone-700 flex gap-6 text-xs text-stone-500">
+        <div className="mt-4 pt-3 border-t border-stone-700 flex flex-wrap gap-x-6 gap-y-1 text-xs text-stone-500">
           <span>
             {t('phase3.totalBought', language)}: <strong className="text-stone-300">{fmtLength(totalLengthBought)}</strong>
           </span>

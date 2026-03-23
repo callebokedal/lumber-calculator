@@ -115,6 +115,11 @@ podman run --rm -v $(pwd):/app:z -w /app node:22-alpine sh -c "npm audit"
 
 # Run in development mode
 podman run --rm -p 5176:5176 -v $(pwd):/app:z -w /app node:22-alpine sh -c "npm run dev -- --host 0.0.0.0"
+
+# To build single page artifacts
+# Note that GitHub can source pages from the `/docs` folder, but not `/dist` folder
+podman run --rm -v $(pwd):/app:z -w /app node:22-alpine sh -c "npm run build -- --outDir docs"
+
 ```
 
 ## Initial setup (first time only)

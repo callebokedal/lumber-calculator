@@ -120,6 +120,9 @@ podman run --rm -p 5176:5176 -v $(pwd):/app:z -w /app node:22-alpine sh -c "npm 
 # Note that GitHub can source pages from the `/docs` folder, but not `/dist` folder
 podman run --rm -v $(pwd):/app:z -w /app node:22-alpine sh -c "npm run build -- --outDir docs"
 
+# To run manual tests
+podman run --rm -v $(pwd):/app:z -w /app node:22-alpine sh -c "npm test" 2>&1
+
 ```
 
 ## Initial setup (first time only)
